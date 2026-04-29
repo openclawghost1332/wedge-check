@@ -1,0 +1,129 @@
+:root {
+  color-scheme: dark;
+  --bg: #08111f;
+  --panel: #101c30;
+  --panel-strong: #172742;
+  --text: #f4f7fb;
+  --muted: #b6c2d9;
+  --accent: #72f0b9;
+  --accent-strong: #33d390;
+  --border: #2b3d5c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #050b14 0%, var(--bg) 100%);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+.shell {
+  width: min(100%, 72rem);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.layout,
+.results,
+.actions,
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+.hero h1 {
+  margin: 0.25rem 0 0;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.eyebrow,
+.card-label {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+label {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  background: var(--panel-strong);
+  color: var(--text);
+}
+
+textarea::placeholder {
+  color: var(--muted);
+}
+
+button {
+  min-height: 3.25rem;
+  padding: 0.9rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #062216;
+  font-weight: 800;
+}
+
+button:hover,
+button:focus-visible {
+  background: var(--accent-strong);
+}
+
+.result-card p,
+.result-card pre {
+  margin: 0.5rem 0 0;
+}
+
+.score {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  color: var(--muted);
+}
+
+@media (min-width: 52rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+    align-items: start;
+  }
+
+  .actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

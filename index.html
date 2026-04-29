@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedge Check</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero card">
+        <p class="eyebrow">Wedge Check</p>
+        <h1>Stress-test an idea in one pass so you can see whether the customer, proof, and wedge are sharp enough to matter.</h1>
+      </section>
+
+      <section class="layout">
+        <form class="card form" data-idea-form>
+          <label>
+            Idea
+            <textarea id="idea" name="idea" rows="2" placeholder="What are you building?"></textarea>
+          </label>
+          <label>
+            Customer
+            <textarea id="customer" name="customer" rows="2" placeholder="Who feels the pain most often?"></textarea>
+          </label>
+          <label>
+            Workaround
+            <textarea id="workaround" name="workaround" rows="3" placeholder="What do they do today instead?"></textarea>
+          </label>
+          <label>
+            Evidence
+            <textarea id="evidence" name="evidence" rows="3" placeholder="What proof says this is urgent?"></textarea>
+          </label>
+          <label>
+            Wedge
+            <textarea id="wedge" name="wedge" rows="3" placeholder="What narrow starting move earns attention?"></textarea>
+          </label>
+
+          <div class="actions">
+            <button type="button" data-score>Score idea</button>
+            <button type="button" data-load="Weak idea">Load weak example</button>
+            <button type="button" data-load="Strong idea">Load strong example</button>
+            <button type="button" data-copy>Copy result</button>
+          </div>
+        </form>
+
+        <section class="results" aria-live="polite">
+          <article class="card result-card">
+            <p class="card-label">Total score</p>
+            <p class="score" data-total-score>0</p>
+          </article>
+          <article class="card result-card">
+            <p class="card-label">Verdict</p>
+            <p data-verdict>Too fuzzy</p>
+          </article>
+          <article class="card result-card">
+            <p class="card-label">Flags</p>
+            <pre data-flags>No red flags.</pre>
+          </article>
+          <article class="card result-card">
+            <p class="card-label">Repair advice</p>
+            <pre data-repair-advice>No repair advice needed yet.</pre>
+          </article>
+          <article class="card result-card">
+            <p class="card-label">Sharpened wedge statement</p>
+            <p data-statement>Add a wedge statement to see a sharper version here.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
