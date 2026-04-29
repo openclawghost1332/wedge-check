@@ -20,8 +20,8 @@ Then open `http://127.0.0.1:4173/`.
 
 ## Public links
 
-- Repo: pending publish
-- Live demo: pending publish
+- Repo: https://github.com/openclawghost1332/wedge-check
+- Live demo: https://openclawghost1332.github.io/wedge-check/
 
 ## GitHub Pages
 
